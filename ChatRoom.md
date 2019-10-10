@@ -2,7 +2,7 @@
 
 ## 1. 通用接口
 ### 1.1. 版本检查
-1.1.1. 协议: C2S_CheckVersion
+1.1.1. 协议: C2S_CheckVersion  
 1.1.2. 参数：版本号,例 1.0.1  
 1.1.3. 返回协议:S2C_CheckVersion  
 1.1.4. 返回参数:  
@@ -32,7 +32,7 @@
 2.1.2. 参数：无  
 2.1.3. 返回协议:S2C_CreateRoom  
 2.1.4. 返回参数:  
-*{ErrorCode:0,RoomId}*
+*{ErrorCode:0,RoomId}*  
 *{ErrorCode:1,ErrorDes:'Manager Already In Room ' + RoomId}*
 >说明：
 >该协议限制仅为管理员可用 ,创建房间后管理员拥有以下权限：  
@@ -61,9 +61,9 @@
 2.4.2. 参数：UserId  
 2.4.3. 返回协议:S2C_KickUser  
 2.4.4. 返回参数:
-*{ErrorCode:0}*
-*{ErrorCode:1,ErrorDes:'Manager Not In Room.'}*
-*{ErrorCode:2,ErrorDes:'User ${data} Not In Room.'}*
+*{ErrorCode:0}*  
+*{ErrorCode:1,ErrorDes:'Manager Not In Room.'}*  
+*{ErrorCode:2,ErrorDes:'User ${data} Not In Room.'}*  
 >说明：  
 >该协议限制仅为管理员可用
 
@@ -72,9 +72,9 @@
 2.5.2. 参数：RoomId  
 2.5.3. 返回协议:S2C_EnterRoom  
 2.5.4. 返回参数:  
-*{ErrorCode:0,UserList:_UserList}*
-*{ErrorCode:1,ErrorDes:'Room ' + _RoomId + ' Not Exist.'}*  
-*{ErrorCode:2,ErrorDes:'Already In Room ' + this.RoomId });*
+*{ErrorCode:0,UserList:_UserList}*  
+*{ErrorCode:1,ErrorDes:'Room ' + _RoomId + ' Not Exist.'}*   
+*{ErrorCode:2,ErrorDes:'Already In Room ' + this.RoomId });*  
 >说明：  
 >该协议限制仅为主播、用户可用
 
@@ -87,19 +87,19 @@
 ### 2.10. 广播解散房间
 2.10.1. 协议: 无  
 2.10.2. 参数：无  
-2.10.3. 返回协议:BC_DismissRoom   
+2.10.3. 返回协议: BC_DismissRoom   
 2.10.4. 返回参数:  
 
 ### 2.11. 广播订单信息
 2.11.1. 协议: 无  
 2.11.2. 参数：无  
-2.11.3. 返回协议:BC_SendOrder 
+2.11.3. 返回协议: BC_SendOrder  
 2.11.4. 返回参数:转发房间管理员发送订单信息，结构由管理员开发确定
 
 ### 2.12. 广播进入房间
 2.12.1. 协议: 无  
 2.12.2. 参数：无  
-2.12.3. 返回协议:BC_EnterRoom   
+2.12.3. 返回协议: BC_EnterRoom   
 2.12.4. 返回参数: {UId,Name,RoleName}
 
 ### 2.13. 广播发送消息
